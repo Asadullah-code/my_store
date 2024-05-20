@@ -541,6 +541,10 @@ a:focus {
     height: 100%;
     z-index: 3;
 }
+.arrival_section .arrival_bg_box:hover{
+  transition: 8s ease;
+  width: 140% !important;
+}
 
 .arrival_section .arrival_bg_box img {
     width: 50%;
@@ -1120,7 +1124,110 @@ form input[type="submit"]:focus {
     font-weight: 400;
 }
 
-http://kute-themes.com/html/boutique/html/index.html
-https://template.hasthemes.com/noraure/noraure/index.html
-https://preview.hasthemes.com/xoss-preview/xoss/index.html
+/*shop with us section css*/
+.img-box:hover svg{
+  scale: 1.05;
+  fill: #f7444e !important; 
+}
+/*register form*/
+.regForm{
+  color: #fff !important;
+  background-color: #f7444ed9 !important;
+  padding: 130px 130px 130px 130px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.inputF{
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+  color: #666 !important;
+  display: block;
+  width: 100% !important;
+  background: #e6e6e6 !important;
+  height: 50px !important;
+  border-radius: 25px !important;
+  padding: 0 26px 0 68px !important;
+  position: relative;
+}
+.logIcon{
+  position: absolute;
+    margin-top: -56px !important;
+    padding: 0px !important;
+    margin-left: -105px !important;
+    color: #465765 !important;
+}
+.inputF{
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.inputF:focus{
+  border: 2px solid black !important;
+}
+.logBtn {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  color: #fff !important;
+  text-transform: uppercase;
+  width: 100% !important;
+  height: 50px !important;
+  border-radius: 25px !important;
+  background: #465765 !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px !important;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  -moz-transition: all .4s;
+  transition: all .4s;
+}
+.logBtn:hover{
+  color: #fff !important;
+  background-color: #f7444ed9 !important;
+}
+.newMem{
+  font-size: 14px !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+.newMem:hover{
+  text-decoration: underline !important;
+}
+/*register form css*/
+.arrival_section .arrival_bg_box:hover{
+  transition: 8s ease;
+  width: 140% !important;
+}
+.loginBtn{
+  color: #fff !important;
+  background-color: #f7444e !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  padding: 8px 30px ! IMPORTANT;
+  border-radius: 20px !important;
+  margin-left: 10px;
+  margin-top: -4px !important;
+}
+.loginBtn:hover{
+  color: #fff !important;
+  background-color: #465765 !important;
+  scale: 1.05 !important;
+}
+/*media query for small devices*/
+@media (max-width: 600px) {
+  .regForm{
+    padding: 30px 30px 30px 30px !important;
+  }
+}
+
 

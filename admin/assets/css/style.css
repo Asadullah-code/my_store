@@ -67,3 +67,16 @@ body{
 .fade-in.show {
   opacity: 1;
 }
+
+/*table css*/
+.table-primary{
+  --bs-table-color: #ededed !important;
+  --bs-table-bg: #380d4e !important;
+}
+.btn-group-vertical>.btn, .btn-group>.btn{
+	color: #fff !important;
+}
+/*image zoom effect css*/
+.p_img:hover{
+	scale: 3.5;
+}

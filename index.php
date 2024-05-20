@@ -11,7 +11,7 @@
       <meta name="description" content="" />
       <meta name="author" content="" />
       <link rel="shortcut icon" href="images/favicon.png" type="">
-      <title>Famms - Fashion HTML Template</title>
+      <title>AsadCart</title>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
       <!-- font awesome style -->
@@ -20,119 +20,112 @@
       <link href="css/style.css" rel="stylesheet" />
       <!-- responsive style -->
       <link href="css/responsive.css" rel="stylesheet" />
+      <style>
+         .filterDiv {
+           display: none;
+         }
+         .show {
+           display: block;
+         }
+      </style>
    </head>
-   <body class="sub_page">
+   <body>
       <div class="hero_area">
-         <!-- header section strats -->
-         <header class="header_section">
-            <div class="container">
-               <nav class="navbar navbar-expand-lg custom_nav-container ">
-                  <a class="navbar-brand" href="index.html"><img width="100" src="images/logo.png" alt="#" /></a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class=""> </span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Pages <span class="caret"></span></a>
-                           <ul class="dropdown-menu">
-                              <li><a href="about.html">About</a></li>
-                              <li><a href="testimonial.html">Testimonial</a></li>
-                           </ul>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="product.html">Products</a>
-                        </li>
-                        <li class="nav-item active">
-                           <a class="nav-link" href="blog_list.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="#">
-                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                                 <g>
-                                    <g>
-                                       <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                                          c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                                    </g>
-                                 </g>
-                                 <g>
-                                    <g>
-                                       <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                                          C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                                          c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                                          C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                                    </g>
-                                 </g>
-                                 <g>
-                                    <g>
-                                       <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                                          c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                                    </g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                              </svg>
-                           </a>
-                        </li>
-                        <form class="form-inline">
-                           <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                           <i class="fa fa-search" aria-hidden="true"></i>
-                           </button>
-                        </form>
-                     </ul>
-                  </div>
-               </nav>
+         <?php include "nav.php" ?>
+         <!-- slider section -->
+         <section class="slider_section ">
+            <div class="slider_bg_box">
+               <img src="images/slider-bg.png" alt="">
             </div>
-         </header>
-         <!-- end header section -->
-      </div>
-      <!-- inner page section -->
-      <section class="inner_page_head">
-         <div class="container_fuild">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="full">
-                     <h3>Blog List</h3>
+            <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container ">
+                        <div class="row">
+                           <div class="col-md-7 col-lg-6 ">
+                              <div class="detail-box">
+                                 <h1>
+                                    <span>
+                                    Sale 20% Off
+                                    </span>
+                                    <br>
+                                    On Everything
+                                 </h1>
+                                 <p>
+                                    Welcome to our cutting-edge online store! Explore curated products, secure payments, and swift delivery. Enjoy 20% off everything for a limited time! Shop now!
+                                 </p>
+                                 <div class="btn-box">
+                                    <a href="login.php" class="btn1">
+                                    Shop Now
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item ">
+                     <div class="container ">
+                        <div class="row">
+                           <div class="col-md-7 col-lg-6 ">
+                              <div class="detail-box">
+                                 <h1>
+                                    <span>
+                                    Sale 25% Off
+                                    </span>
+                                    <br>
+                                    For Children
+                                 </h1>
+                                 <p>
+                                    Discover seamless shopping at our online store! Secure payments, swift delivery, and 25% off everything! Shop now!
+                                 </p>
+                                 <div class="btn-box">
+                                    <a href="login.php" class="btn1">
+                                    Shop Now
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container ">
+                        <div class="row">
+                           <div class="col-md-7 col-lg-6 ">
+                              <div class="detail-box">
+                                 <h1>
+                                    <span>
+                                    Sale 20% Off
+                                    </span>
+                                    <br>
+                                    On Everything
+                                 </h1>
+                                 <p>
+                                    Experience top-notch online shopping! Curated products, secure payments, and 20% off everything! Don't miss out!
+                                 </p>
+                                 <div class="btn-box">
+                                    <a href="login.php" class="btn1">
+                                    Shop Now
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
                </div>
+               <div class="container">
+                  <ol class="carousel-indicators">
+                     <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+                     <li data-target="#customCarousel1" data-slide-to="1"></li>
+                     <li data-target="#customCarousel1" data-slide-to="2"></li>
+                  </ol>
+               </div>
             </div>
-         </div>
-      </section>
-      <!-- end inner page section -->
+         </section>
+         <!-- end slider section -->
+      </div>
       <!-- why section -->
       <section class="why_section layout_padding">
          <div class="container">
@@ -143,7 +136,7 @@
             </div>
             <div class="row">
                <div class="col-md-4">
-                  <div class="box ">
+                  <div class="box shBox">
                      <div class="img-box">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                            <g>
@@ -236,13 +229,13 @@
                            Fast Delivery
                         </h5>
                         <p>
-                           variations of passages of Lorem Ipsum available
+                           Experience the convenience of getting what you need, when you need it.Your satisfaction is our commitment.
                         </p>
                      </div>
                   </div>
                </div>
                <div class="col-md-4">
-                  <div class="box ">
+                  <div class="box shBox">
                      <div class="img-box">
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve">
                            <g>
@@ -348,16 +341,16 @@
                      </div>
                      <div class="detail-box">
                         <h5>
-                           Free Shiping
+                           Convenience
                         </h5>
                         <p>
-                           variations of passages of Lorem Ipsum available
+                           Shop effortlessly with our user-friendly interface and enjoy a seamless, hassle-free experience.
                         </p>
                      </div>
                   </div>
                </div>
                <div class="col-md-4">
-                  <div class="box ">
+                  <div class="box shBox">
                      <div class="img-box">
                         <svg id="_30_Premium" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg" data-name="30_Premium">
                            <g id="filled">
@@ -372,7 +365,7 @@
                            Best Quality
                         </h5>
                         <p>
-                           variations of passages of Lorem Ipsum available
+                           Explore a range of products that embody the best in quality, ensuring your satisfaction every time.
                         </p>
                      </div>
                   </div>
@@ -381,85 +374,130 @@
          </div>
       </section>
       <!-- end why section -->
-      <!-- footer section -->
-      <footer class="footer_section">
+      
+      <!-- arrival section -->
+      <section class="arrival_section">
          <div class="container">
-            <div class="row">
-               <div class="col-md-4 footer-col">
-                  <div class="footer_contact">
-                     <h4>
-                        Reach at..
-                     </h4>
-                     <div class="contact_link_box">
-                        <a href="">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <span>
-                        Location
-                        </span>
-                        </a>
-                        <a href="">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        <span>
-                        Call +01 1234567890
-                        </span>
-                        </a>
-                        <a href="">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <span>
-                        demo@gmail.com
-                        </span>
-                        </a>
-                     </div>
-                  </div>
+            <div class="box">
+               <div class="arrival_bg_box">
+                  <img src="images/arrival-bg.png" alt="">
                </div>
-               <div class="col-md-4 footer-col">
-                  <div class="footer_detail">
-                     <a href="index.html" class="footer-logo">
-                     Famms
-                     </a>
-                     <p>
-                        Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
+               <div class="row">
+                  <div class="col-md-6 ml-auto">
+                     <div class="heading_container remove_line_bt">
+                        <h2>
+                           #NewArrivals
+                        </h2>
+                     </div>
+                     <p style="margin-top: 20px;margin-bottom: 30px;">
+                        Explore our freshest arrivals! Dive into a handpicked selection of new and captivating products that redefine style and utility. Stay ahead of the curve with our latest offerings – your gateway to cutting-edge and on-trend essentials. Elevate your lifestyle with our newest additions, where innovation meets your desires.
                      </p>
-                     <div class="footer_social">
-                        <a href="">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                        <i class="fa fa-pinterest" aria-hidden="true"></i>
-                        </a>
-                     </div>
+                     <a href="">
+                     Shop Now
+                     </a>
                   </div>
-               </div>
-               <div class="col-md-4 footer-col">
-                  <div class="map_container">
-                     <div class="map">
-                        <div id="googleMap"></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="footer-info">
-               <div class="col-lg-7 mx-auto px-0">
-                  <p>
-                     &copy; <span id="displayYear"></span> All Rights Reserved By
-                     <a href="https://html.design/">Free Html Templates</a><br>
-         
-                     Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-                  </p>
                </div>
             </div>
          </div>
-      </footer>
-      <!-- footer section -->
+      </section>
+      <!-- end arrival section -->
+      
+      <!-- client section -->
+      <section class="client_section layout_padding">
+         <div class="container">
+            <div class="heading_container heading_center">
+               <h2>
+                  Customer's Testimonial
+               </h2>
+            </div>
+            <div id="carouselExample3Controls" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="box col-lg-10 mx-auto">
+                        <div class="img_container">
+                           <div class="img-box">
+                              <div class="img_box-inner">
+                                 <img src="images/client.jpg" alt="">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="detail-box">
+                           <h5>
+                              Anna Trevor
+                           </h5>
+                           <h6>
+                              Customer
+                           </h6>
+                           <p>
+                              Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="box col-lg-10 mx-auto">
+                        <div class="img_container">
+                           <div class="img-box">
+                              <div class="img_box-inner">
+                                 <img src="images/client.jpg" alt="">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="detail-box">
+                           <h5>
+                              Anna Trevor
+                           </h5>
+                           <h6>
+                              Customer
+                           </h6>
+                           <p>
+                              Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="box col-lg-10 mx-auto">
+                        <div class="img_container">
+                           <div class="img-box">
+                              <div class="img_box-inner">
+                                 <img src="images/client.jpg" alt="">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="detail-box">
+                           <h5>
+                              Anna Trevor
+                           </h5>
+                           <h6>
+                              Customer
+                           </h6>
+                           <p>
+                              Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel_btn_box">
+                  <a class="carousel-control-prev" href="#carouselExample3Controls" role="button" data-slide="prev">
+                  <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                  <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExample3Controls" role="button" data-slide="next">
+                  <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                  <span class="sr-only">Next</span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end client section -->
+
+      <div class="cpy_">
+         <p class="mx-auto">© 2021 All Rights Reserved By <a href="">Ac Cart</a>         
+         </p>
+      </div>
       <!-- jQery -->
       <script src="js/jquery-3.4.1.min.js"></script>
       <!-- popper js -->

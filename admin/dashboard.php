@@ -41,7 +41,7 @@ if (!isset($_SESSION['username'])) {
 							    <h4 class="text-white">Today's Order :</h4>
 						        <hr class="text-white ms-5 w-75">
 						    </div>
-						    <div class="col-lg-12 col-12">
+						    <div class="col-12">
 							    <table class="table table-primary">
 							      <thead>
 							        <tr>
@@ -63,25 +63,6 @@ if (!isset($_SESSION['username'])) {
 							          <td>
 									    <div class="btn-group">
 									      <button type="button" class="btn bg-transparent dropdown-toggle p-0 border-0" data-bs-toggle="dropdown" aria-expanded="false">
-									        Action
-									      </button>
-									      <ul class="dropdown-menu">
-									        <li><a class="dropdown-item" href="#">Edit</a></li>
-									        <li><a class="dropdown-item" href="#">Delete</a></li>
-									        <li><a class="dropdown-item" href="#">Confirm</a></li>
-									      </ul>
-									    </div>
-								      </td>
-							        </tr>
-							        <tr>
-							          <th scope="row">2</th>
-							          <td>Jacob</td>
-							          <td>Thornton</td>
-							          <td>@fat</td>
-							          <td>@fat</td>
-							          <td>
-									    <div class="btn-group">
-									      <button type="button" class="btn bg-transparent dropdown-toggle p-0" data-bs-toggle="dropdown" aria-expanded="false">
 									        Action
 									      </button>
 									      <ul class="dropdown-menu">

@@ -14,6 +14,7 @@
         <li><a href="category.php" class="nav-link px-2 text-white"><i class="fas fa-list me-1"></i> Category</a></li>
         <li><a href="brand.php" class="nav-link px-2 text-white"><i class="fas fa-tags me-1"></i> Brand</a></li>
         <li><a href="order.php" class="nav-link px-2 text-white"><i class="fas fa-shopping-cart me-1"></i> Order</a></li>
+        <li><a href="../index.php" target="_new" class="nav-link px-2 text-white"><i class="fas fa-eye ms-auto me-auto"></i> View Site</a></li>
       </ul>
 
      <!--  <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">

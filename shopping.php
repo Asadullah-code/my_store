@@ -1,3 +1,7 @@
+<?php    
+   include "session.php";
+   $user_email = $_SESSION['email'];
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -31,102 +35,7 @@
    </head>
    <body>
       <div class="hero_area">
-         <!-- header section strats -->
-         <header class="header_section">
-            <div class="container">
-               <nav class="navbar navbar-expand-lg custom_nav-container ">
-                  <a class="navbar-brand" href="index.html"><img width="100" src="images/logo.png" alt="#" /></a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class=""> </span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                       <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Pages <span class="caret"></span></a>
-                           <ul class="dropdown-menu">
-                              <li><a href="about.html">About</a></li>
-                              <li><a href="testimonial.html">Testimonial</a></li>
-                           </ul>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="product.html">Products</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="blog_list.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="#">
-                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                                 <g>
-                                    <g>
-                                       <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                                          c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                                    </g>
-                                 </g>
-                                 <g>
-                                    <g>
-                                       <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                                          C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                                          c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                                          C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                                    </g>
-                                 </g>
-                                 <g>
-                                    <g>
-                                       <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                                          c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                                    </g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                                 <g>
-                                 </g>
-                              </svg>
-                           </a>
-                        </li>
-                        <form class="form-inline">
-                           <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                           <i class="fa fa-search" aria-hidden="true"></i>
-                           </button>
-                        </form>
-                     </ul>
-                  </div>
-               </nav>
-            </div>
-         </header>
-         <!-- end header section -->
+         <?php include "nav.php" ?>
          <!-- slider section -->
          <section class="slider_section ">
             <div class="slider_bg_box">
@@ -141,16 +50,16 @@
                               <div class="detail-box">
                                  <h1>
                                     <span>
-                                    Sale 25% Off
+                                    Sale 20% Off
                                     </span>
                                     <br>
                                     On Everything
                                  </h1>
                                  <p>
-                                    Welcome to our cutting-edge online store! Explore curated products, secure payments, and swift delivery. Enjoy 25% off everything for a limited time! Shop now!
+                                    Welcome to our cutting-edge online store! Explore curated products, secure payments, and swift delivery. Enjoy 20% off everything for a limited time! Shop now!
                                  </p>
                                  <div class="btn-box">
-                                    <a href="product.html" class="btn1">
+                                    <a href="#product" class="btn1">
                                     Shop Now
                                     </a>
                                  </div>
@@ -169,13 +78,13 @@
                                     Sale 25% Off
                                     </span>
                                     <br>
-                                    On Everything
+                                    For Children
                                  </h1>
                                  <p>
                                     Discover seamless shopping at our online store! Secure payments, swift delivery, and 25% off everything! Shop now!
                                  </p>
                                  <div class="btn-box">
-                                    <a href="product.html" class="btn1">
+                                    <a href="#product" class="btn1">
                                     Shop Now
                                     </a>
                                  </div>
@@ -191,16 +100,16 @@
                               <div class="detail-box">
                                  <h1>
                                     <span>
-                                    Sale 25% Off
+                                    Sale 20% Off
                                     </span>
                                     <br>
                                     On Everything
                                  </h1>
                                  <p>
-                                    Experience top-notch online shopping! Curated products, secure payments, and 25% off everything! Don't miss out!
+                                    Experience top-notch online shopping! Curated products, secure payments, and 20% off everything! Don't miss out!
                                  </p>
                                  <div class="btn-box">
-                                    <a href="product.html" class="btn1">
+                                    <a href="#product" class="btn1">
                                     Shop Now
                                     </a>
                                  </div>
@@ -231,7 +140,7 @@
             </div>
             <div class="row">
                <div class="col-md-4">
-                  <div class="box ">
+                  <div class="box shBox">
                      <div class="img-box">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                            <g>
@@ -330,7 +239,7 @@
                   </div>
                </div>
                <div class="col-md-4">
-                  <div class="box ">
+                  <div class="box shBox">
                      <div class="img-box">
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve">
                            <g>
@@ -445,7 +354,7 @@
                   </div>
                </div>
                <div class="col-md-4">
-                  <div class="box ">
+                  <div class="box shBox">
                      <div class="img-box">
                         <svg id="_30_Premium" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg" data-name="30_Premium">
                            <g id="filled">
@@ -498,7 +407,7 @@
       <!-- end arrival section -->
       
       <!-- product section -->
-      <section class="product_section layout_padding">
+      <section class="product_section layout_padding" id="product">
          <div class="container">
             <div class="heading_container heading_center">
                <h2>
@@ -507,319 +416,64 @@
             </div>
             <div class="row d-flex align-items-center justify-content-center bg-white">
                <div class="col-xxl-2 col-lg-2 col-md-4 col-4 mb-2 p-2  text-center" style="cursor: pointer; margin-right: 15px; background-color: #f7444e;">
-                  <button class="btn text-white" id="menBtn" onclick="filterSelection('men')">Men</button>
+                  <button class="btn text-white" id="menBtn" onclick="filterSelection('Man')">Man</button>
                </div>
                <div class="col-xxl-2 col-lg-2 col-md-4 col-4 mb-2 p-2  text-center" style="cursor: pointer; margin-right: 15px; background-color: #f7444e;">
-                  <button class="btn text-white" id="womenBtn" onclick="filterSelection('women')">Women</button>
+                  <button class="btn text-white" id="womenBtn" onclick="filterSelection('Women')">Women</button>
                </div>
                <div class="col-xxl-2 col-lg-2 col-md-4 col-4 mb-2 p-2 text-center" style="cursor: pointer; background-color: #f7444e;">
                   <button class="btn text-white" onclick="filterSelection('all')">All</button>
                </div>
             </div>
-            <div class="row">
-               <div class="col-sm-6 col-md-4 col-lg-4 filterDiv men">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                           Add To Cart
-                           </a>
-                           <a href="" class="option2">
-                           Buy Now
-                           </a>
+
+            <div class="row d-flex align-items-center">
+               <?php 
+                  include "admin/conn.php";
+
+                  $sql = "SELECT * FROM product";
+                  $result = $conn->query($sql);
+
+                  if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                      echo '
+                        <div class="col-sm-6 col-md-4 col-lg-4 filterDiv '.$row['pc_name'].'">
+                           <div class="box">
+                              <div class="option_container">
+                                 <div class="options">
+                                    <a href="" class="option1">
+                                    Add to cart
+                                    </a>
+                                    <a href="" class="option2">
+                                    Buy Now
+                                    </a>
+                                 </div>
+                              </div>
+                              <div class="img-box">
+                                 <img src="admin/'.$row['p_img'].'" alt="">
+                              </div>
+                              <div class="detail-box">
+                                 <h5>
+                                    '.$row['p_name'].'
+                                 </h5>
+                                 <h6>
+                                    $'.$row['p_price'].'
+                                 </h6>
+                              </div>
+                           </div> 
+                           <!-- end here -->
                         </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p1.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Men's Shirt
-                        </h5>
-                        <h6>
-                           $75
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4 filterDiv men">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                           Add To Cart
-                           </a>
-                           <a href="" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p2.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Men's Shirt
-                        </h5>
-                        <h6>
-                           $80
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4 filterDiv men">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                           Add To Cart
-                           </a>
-                           <a href="" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p8.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Men's Shirt
-                        </h5>
-                        <h6>
-                           $65
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4 filterDiv men">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                           Add To Cart
-                           </a>
-                           <a href="" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p9.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Men's Shirt
-                        </h5>
-                        <h6>
-                           $65
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4 filterDiv men">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                           Add To Cart
-                           </a>
-                           <a href="" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p10.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Men's Shirt
-                        </h5>
-                        <h6>
-                           $65
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4 filterDiv men">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                           Add To Cart
-                           </a>
-                           <a href="" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p11.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Men's Shirt
-                        </h5>
-                        <h6>
-                           $65
-                        </h6>
-                     </div>
-                  </div>
-               </div>
+                      ';
+                    }
+                  } else {
+                    echo '';
+                  }
+                  $conn->close();
+               ?>
+               
             </div>
-            <div class="row">   
-               <div class="col-sm-6 col-md-4 col-lg-4 filterDiv women">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                           Add To Cart
-                           </a>
-                           <a href="" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p3.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Women's Dress
-                        </h5>
-                        <h6>
-                           $68
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4 filterDiv women">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                           Add To Cart
-                           </a>
-                           <a href="" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p4.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Women's Dress
-                        </h5>
-                        <h6>
-                           $70
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4 filterDiv women">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                           Add To Cart
-                           </a>
-                           <a href="" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p5.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Women's Dress
-                        </h5>
-                        <h6>
-                           $75
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4 filterDiv women">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                           Add To Cart
-                           </a>
-                           <a href="" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p6.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Women's Dress
-                        </h5>
-                        <h6>
-                           $58
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4 filterDiv women">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                           Add To Cart
-                           </a>
-                           <a href="" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p7.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Women's Dress
-                        </h5>
-                        <h6>
-                           $80
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4 filterDiv women">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                           Add To Cart
-                           </a>
-                           <a href="" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p12.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Women's Dress
-                        </h5>
-                        <h6>
-                           $65
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-            </div>
+
+
             <script>
                filterSelection("all")
                function filterSelection(c) {
@@ -871,7 +525,7 @@
             </script>
 
             <div class="btn-box">
-               <a href="product.html">
+               <a href="product.php">
                View All products
                </a>
             </div>
@@ -1067,10 +721,7 @@
       </footer>
       <!-- footer end -->
       <div class="cpy_">
-         <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
-         
-            Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-         
+         <p class="mx-auto">© 2021 All Rights Reserved By <a href="">Ac Cart</a>         
          </p>
       </div>
       <!-- jQery -->
