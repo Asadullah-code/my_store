@@ -438,29 +438,34 @@
                     while($row = $result->fetch_assoc()) {
                       echo '
                         <div class="col-sm-6 col-md-4 col-lg-4 filterDiv '.$row['pc_name'].'">
-                           <div class="box">
-                              <div class="option_container">
-                                 <div class="options">
-                                    <a href="" class="option1">
-                                    Add to cart
-                                    </a>
-                                    <a href="" class="option2">
-                                    Buy Now
-                                    </a>
+                           <form method="post" action="cart.php">';?>
+                                 <input type="hidden" name="user_email" value="<?php echo $user_email; ?>">
+                                 <?php echo'
+                              <div class="box">
+                                 <div class="option_container">
+                                    <div class="options">
+                                       <button type="submit" class="btn option1">
+                                          Add to cart
+                                       </button>
+                                    </div>
                                  </div>
-                              </div>
-                              <div class="img-box">
-                                 <img src="admin/'.$row['p_img'].'" alt="">
-                              </div>
-                              <div class="detail-box">
-                                 <h5>
-                                    '.$row['p_name'].'
-                                 </h5>
-                                 <h6>
-                                    $'.$row['p_price'].'
-                                 </h6>
-                              </div>
-                           </div> 
+                                 <div class="img-box">
+                                    <img src="admin/'.$row['p_img'].'" alt="">
+                                    <input type="hidden" name="p_img" value="'.$row['p_img'].'">
+                                 </div>
+                                 <div class="detail-box">
+                                    <h5>
+                                       '.$row['p_name'].'
+                                    </h5>
+                                    <input type="hidden" name="p_name" value="'.$row['p_name'].'">
+                                    <h6>
+                                       $'.$row['p_price'].'
+                                    </h6>
+                                    <input type="hidden" name="p_price" value="'.$row['p_price'].'">
+                                    <input type="hidden" name="p_id" value="'.$row['id'].'">
+                                 </div>
+                              </div> 
+                           </form>
                            <!-- end here -->
                         </div>
                       ';

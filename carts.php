@@ -15,7 +15,7 @@
       <meta name="description" content="" />
       <meta name="author" content="" />
       <link rel="shortcut icon" href="images/favicon.png" type="">
-      <title>Ac Cart</title>
+      <title>Carts</title>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
       <!-- font awesome style -->
@@ -37,81 +37,98 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="full">
-                     <h3>Product Grid</h3>
+                     <h3>Ready To Shipment</h3>
                   </div>
                </div>
             </div>
          </div>
       </section>
       <!-- end inner page section -->
-      <!-- product section -->
-      <section class="product_section layout_padding">
+      <!-- why section -->
+      <section class="why_section layout_padding">
          <div class="container">
-            <div class="heading_container heading_center">
-               <h2>
-                  Our <span>products</span>
-               </h2>
-            </div>
+         
             <div class="row">
-               <?php 
-                  include "admin/conn.php";
-
-                  $sql = "SELECT * FROM product";
-                  $result = $conn->query($sql);
-
-                  if ($result->num_rows > 0) {
-                    // output data of each row
-                    while($row = $result->fetch_assoc()) {
-                      echo '
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-                           <form method="post" action="cart.php">'; ?>
-                                 <input type="hidden" name="user_email" value="<?php echo $user_email; ?>">
-                                 <?php echo '
-                              <div class="box">
-                                 <div class="option_container">
-                                    <div class="options">
-                                       <button type="submit" class="btn option1">
-                                          Add to cart
-                                       </button>
-                                    </div>
-                                 </div>
-                                 <div class="img-box">
-                                    <img src="admin/'.$row['p_img'].'" alt="">
-                                    <input type="hidden" name="p_img" value="'.$row['p_img'].'">
-                                 </div>
-                                 <div class="detail-box">
-                                    <h5>
-                                       '.$row['p_name'].'
-                                    </h5>
-                                    <input type="hidden" name="p_name" value="'.$row['p_name'].'">
-                                    <h6>
-                                       $'.$row['p_price'].'
-                                    </h6>
-                                    <input type="hidden" name="p_price" value="'.$row['p_price'].'">
-                                    <input type="hidden" name="p_id" value="'.$row['id'].'">
-                                 </div>
-                              </div> 
-                           </form>
-                           <!-- end here -->
+               <!-- <div class="col-lg-6 offset-lg-0">
+                  <div class="full">
+                     <form action="">
+                        <fieldset>
+                           <input type="text" placeholder="Enter your full name" name="name" required />
+                           <input type="email" placeholder="Enter your email address" name="email" required />
+                           <input type="text" placeholder="Enter subject" name="subject" required />
+                           <textarea placeholder="Enter your message" required></textarea>
+                           <input type="submit" value="Submit" />
+                        </fieldset>
+                     </form>
+                  </div>
+               </div> -->
+               <div class="col-lg-12 offset-lg-0">
+                  <div class="full">
+                        <div class="row d-flex align-items-center justify-content-between cartDiv" style="border-bottom: 2px solid #000; padding: 14px;">
+                           <div class="col">No.</div>
+                           <div class="col">Product</div>
+                           <div class="col">Price</div>
+                           <div class="col">Product image</div>
+                           <div class="col">Product Quantity</div>
                         </div>
-                      ';
-                    }
-                  } else {
-                    echo '';
-                  }
-                  $conn->close();
-               ?>
-               
+                     <?php    
+                        include 'admin/conn.php';
+
+                        $sql = "SELECT * FROM cart WHERE user_email= '$user_email'";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                           $total_price = 0;
+                           $count = 1;
+                          // output data of each row
+                          while($row = $result->fetch_assoc()) {
+                           $total_price += $row["p_price"];
+                            echo '
+                                 <div class="row d-flex align-items-center justify-content-between cartDiv p-3">
+                                    ';?>
+                                    <div class="col"><?php echo $count; ?></div>
+                                 <?php echo'
+                                    <div class="col">'.$row["p_name"].'</div>
+                                    <div class="col">$'.$row["p_price"].'</div>
+                                    <div class="col">
+                                    <img height="50" width="50" src="admin/'.$row["p_img"].'">
+                                    </div>
+                                    <div class="col">'.$row["p_quantity"].'</div>
+                                 </div>
+                            ';
+                          }
+                          $count++;
+                        } else {
+                          echo "0 results";
+                        }
+                        $conn->close();
+                     ?>
+                     <div class="row d-flex align-items-center justify-content-between cartDiv" style="border: 2px solid #000; padding: 14px;">
+                        <div class="col text-center">Total: $<?php echo $total_price; ?></div>
+                     </div>
+                     <!-- end here -->
+                  </div>
+               </div>
             </div>
-            <!-- row end here -->
-            <!-- <div class="btn-box">
-               <a href="">
-               View All products
-               </a>
-            </div> -->
          </div>
       </section>
-      <!-- end product section -->
+
+      <!-- end why section -->
+      <!-- arrival section -->
+      <section class="arrival_section">
+         <div class="container">
+            <div class="box">
+               <div class="row">
+                  <div class="col-12 text-center">
+                     <a href="products.php" style="padding: 22px 54px !important;">
+                        Continue Shopping
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end arrival section -->
       <!-- footer section -->
       <footer class="footer_section">
          <div class="container">

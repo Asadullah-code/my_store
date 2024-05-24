@@ -486,6 +486,17 @@ a:focus {
   color: #f7444e;
 }
 
+.option1 {
+  background-color: #f7444e;
+  border: 1px solid #f7444e;
+  color: #ffffff;
+}
+
+.option1:hover {
+  background-color: transparent;
+  color: #f7444e;
+}
+
 .product_section .options .option2 {
   background-color: #000000;
   border: 1px solid #000000;
@@ -1229,5 +1240,8 @@ form input[type="submit"]:focus {
     padding: 30px 30px 30px 30px !important;
   }
 }
-
+/*carts page*/
+.cartDiv{
+  background-color: #d4ced077 !important;
+}
 
